@@ -74,3 +74,26 @@ function enableButtons() {
     document.getElementById('terre').disabled = false;
 }
 
+
+function checkGameOver() {
+    if (playerScore >= MAX_SCORE) {
+        displayResult({
+            result: 'game-over',
+            message: '🏆 VICTOIRE FINALE ! Vous avez gagné la partie !'
+        });
+        disableButtons();
+        return true;
+    }
+
+    if (pcScore >= MAX_SCORE) {
+        displayResult({
+            result: 'game-over',
+            message: '💔 DÉFAITE ! L\'ordinateur a gagné la partie.'
+        });
+        disableButtons();
+        return true;
+    }
+
+    return false;
+}
+
