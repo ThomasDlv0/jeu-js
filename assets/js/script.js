@@ -51,3 +51,8 @@ function displayResult(result) {
     messageElement.textContent = result.message;
     messageElement.className = 'message ' + result.result;
 }
+
+function displayChoices(playerChoice, pcChoice) {
+    document.getElementById('player-choice').textContent = powerEmojis[playerChoice];
+    document.getElementById('pc-choice').textContent = powerEmojis[pcChoice];
+}
