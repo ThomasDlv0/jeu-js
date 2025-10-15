@@ -61,3 +61,9 @@ function updateScores() {
     document.getElementById('player-score').textContent = playerScore;
     document.getElementById('pc-score').textContent = pcScore;
 }
+
+function disableButtons() {
+    document.getElementById('feu').disabled = true;
+    document.getElementById('eau').disabled = true;
+    document.getElementById('terre').disabled = true;
+}
