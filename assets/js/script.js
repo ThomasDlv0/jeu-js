@@ -125,3 +125,14 @@ function handlePlayerChoice(choice) {
     // Vérifier si la partie est terminée
     checkGameOver();
 }
+
+function resetGame() {
+    playerScore = 0;
+    pcScore = 0;
+    updateScores();
+    document.getElementById('player-choice').textContent = '-';
+    document.getElementById('pc-choice').textContent = '-';
+    displayResult({ result: '', message: 'Choisissez votre pouvoir !' });
+    enableButtons();
+    console.log('Nouvelle partie commencée');
+}
