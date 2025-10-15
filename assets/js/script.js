@@ -56,3 +56,8 @@ function displayChoices(playerChoice, pcChoice) {
     document.getElementById('player-choice').textContent = powerEmojis[playerChoice];
     document.getElementById('pc-choice').textContent = powerEmojis[pcChoice];
 }
+
+function updateScores() {
+    document.getElementById('player-score').textContent = playerScore;
+    document.getElementById('pc-score').textContent = pcScore;
+}
