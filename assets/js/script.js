@@ -67,3 +67,10 @@ function disableButtons() {
     document.getElementById('eau').disabled = true;
     document.getElementById('terre').disabled = true;
 }
+
+function enableButtons() {
+    document.getElementById('feu').disabled = false;
+    document.getElementById('eau').disabled = false;
+    document.getElementById('terre').disabled = false;
+}
+
