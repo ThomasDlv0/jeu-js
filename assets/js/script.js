@@ -97,3 +97,31 @@ function checkGameOver() {
     return false;
 }
 
+
+
+function handlePlayerChoice(choice) {
+    console.log('Bouton cliqué:', choice);
+
+    // Récupérer les choix
+    const playerChoice = powerPlayer(choice);
+    const pcChoice = powerPc();
+
+    // Afficher les choix
+    displayChoices(playerChoice, pcChoice);
+
+    // Jouer le round
+    const result = playGame(playerChoice, pcChoice);
+
+    // Mettre à jour les scores
+    if (result.result === 'victory') {
+        playerScore++;
+    } else if (result.result === 'defeat') {
+        pcScore++;
+    }
+
+    updateScores();
+    displayResult(result);
+
+    // Vérifier si la partie est terminée
+    checkGameOver();
+}
