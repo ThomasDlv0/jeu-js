@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Javascript Jeu</title>
-  </head>
-  <body>
+</head>
+<body>
+<div class="game-container">
+    <h1>🔥 💧 🌍</h1>
+    <div class="score-board">
+        <div class="score-item">
+            <div class="score-label">Joueur</div>
+            <div class="score-value" id="player-score">0</div>
+        </div>
+        <div class="score-item">
+            <div class="score-label">Ordinateur</div>
+            <div class="score-value" id="pc-score">0</div>
+        </div>
+    </div>
+    <div class="choices-display">
+        <div class="choice-item">
+            <div class="choice-label">Votre choix</div>
+            <div class="choice-value" id="player-choice">-</div>
+        </div>
+        <div class="choice-item">
+            <div class="choice-label">Ordinateur</div>
+            <div class="choice-value" id="pc-choice">-</div>
+        </div>
+    </div>
 
-  </body>
+    <div id="message" class="message">Choisissez votre pouvoir !</div>
+
+    <div class="buttons-container">
+        <button id="feu" onclick="handlePlayerChoice('feu')">🔥 Feu</button>
+        <button id="eau" onclick="handlePlayerChoice('eau')">💧 Eau</button>
+        <button id="terre" onclick="handlePlayerChoice('terre')">🌍 Terre</button>
+    </div>
+
+    <button class="reset-button" onclick="resetGame()">Nouvelle partie</button>
+</div>
+</body>
 </html>
