@@ -45,3 +45,9 @@ function playGame(playerChoice, pcChoice) {
     // Tous les autres cas = défaite
     return { result: 'defeat', message: '😞 Vous perdez ! L\'ordinateur gagne ce round.' };
 }
+
+function displayResult(result) {
+    const messageElement = document.getElementById('message');
+    messageElement.textContent = result.message;
+    messageElement.className = 'message ' + result.result;
+}
