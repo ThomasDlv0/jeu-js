@@ -15,3 +15,7 @@ function powerPc() {
     const randomIndex = Math.floor(Math.random() * powers.length);
     return powers[randomIndex];
 }
+
+function powerPlayer(choice) {
+    return choice;
+}
