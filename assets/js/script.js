@@ -19,3 +19,29 @@ function powerPc() {
 function powerPlayer(choice) {
     return choice;
 }
+
+function playGame(playerChoice, pcChoice) {
+    console.log('Joueur:', playerChoice, 'VS Ordinateur:', pcChoice);
+
+    if (playerChoice === pcChoice) {
+        return { result: 'draw', message: 'Égalité ! Vous avez choisi le même pouvoir.' };
+    }
+
+    // Le feu bat la terre
+    if (playerChoice === 'feu' && pcChoice === 'terre') {
+        return { result: 'victory', message: '🎉 Vous gagnez ! Le feu brûle la terre.' };
+    }
+
+    // L'eau bat le feu
+    if (playerChoice === 'eau' && pcChoice === 'feu') {
+        return { result: 'victory', message: '🎉 Vous gagnez ! L\'eau éteint le feu.' };
+    }
+
+    // La terre bat l'eau
+    if (playerChoice === 'terre' && pcChoice === 'eau') {
+        return { result: 'victory', message: '🎉 Vous gagnez ! La terre absorbe l\'eau.' };
+    }
+
+    // Tous les autres cas = défaite
+    return { result: 'defeat', message: '😞 Vous perdez ! L\'ordinateur gagne ce round.' };
+}
